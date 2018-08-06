@@ -25,7 +25,6 @@ public class Jobs {
     }
 
     @RequestMapping(value = "/jobs/all",method = RequestMethod.GET)
-
     public List<tb_jobs> getAllApplicants(){
 
         return call_service.all_jobs();

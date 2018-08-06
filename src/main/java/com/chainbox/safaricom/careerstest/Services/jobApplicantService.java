@@ -43,7 +43,7 @@ public class jobApplicantService {
         List<tb_job_applicants> applicants=new ArrayList<>();
         List<tb_job_applicants> applicants_filtered=null;
         appli_interface.findAll().forEach(applicants::add);
-        applicants_filtered=applicants.stream().filter(tb_products -> tb_products.getId()==job_applicant_id).collect(Collectors.toList());
+        applicants_filtered=applicants.stream().filter(tb_job_applicants -> tb_job_applicants.getId()==job_applicant_id).collect(Collectors.toList());
         return  applicants_filtered;
 
     }
